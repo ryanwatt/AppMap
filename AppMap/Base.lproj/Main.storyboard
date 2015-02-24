@@ -183,7 +183,41 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1B4-wD-bUY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="702" y="405"/>
+            <point key="canvasLocation" x="1514" y="405"/>
+        </scene>
+        <!--Third Options View Controller-->
+        <scene sceneID="fAQ-le-Ayp">
+            <objects>
+                <viewController id="wSW-qc-tDB" customClass="ThirdOptionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vFL-PK-XvJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="fL9-9C-0Hx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Nl-dj-Df4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBK-a4-ZG8">
+                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="vBK-a4-ZG8" secondAttribute="centerX" id="1An-tD-v8Q"/>
+                            <constraint firstAttribute="centerY" secondItem="vBK-a4-ZG8" secondAttribute="centerY" constant="0.5" id="aGi-AK-sYp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qpn-zy-ZmV"/>
+                    <connections>
+                        <outlet property="thirdOptionsLabel" destination="vBK-a4-ZG8" id="MnX-ys-s87"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q7a-Na-CbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1509" y="1111"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qY6-Oj-rt5">
@@ -231,11 +265,79 @@
                     <connections>
                         <segue destination="C1U-tn-OkU" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="KsP-Nk-Jtq" kind="relationship" relationship="viewControllers" id="23H-F5-qz9"/>
+                        <segue destination="5Le-c2-wW9" kind="relationship" relationship="viewControllers" id="Hrm-CK-Huc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="bgF-cd-VBb">
+            <objects>
+                <viewController id="qHE-si-4CJ" customClass="ThirdViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G6S-Fi-UUr"/>
+                        <viewControllerLayoutGuide type="bottom" id="k0J-Ee-0Qt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UNb-w8-H8G">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ynv-jq-eke">
+                                <rect key="frame" x="283" y="209" width="34" height="30"/>
+                                <state key="normal" title="Eeny">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wSW-qc-tDB" kind="show" identifier="eeny" id="AkC-Vz-yN2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xb7-tR-oVR">
+                                <rect key="frame" x="279" y="317" width="42" height="30"/>
+                                <state key="normal" title="Miney">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wSW-qc-tDB" kind="show" identifier="miney" id="tSe-Qs-Wy5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Third View" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iq7-FE-3od">
+                                <rect key="frame" x="254" y="355" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKD-mf-R8j">
+                                <rect key="frame" x="271" y="267" width="46" height="30"/>
+                                <state key="normal" title="Meeny">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wSW-qc-tDB" kind="show" identifier="meeny" id="6bV-gt-dTf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="xb7-tR-oVR" secondAttribute="centerX" id="01v-bU-ghR"/>
+                            <constraint firstAttribute="centerY" secondItem="xb7-tR-oVR" secondAttribute="centerY" constant="-32" id="R2Y-ku-Aup"/>
+                            <constraint firstItem="XKD-mf-R8j" firstAttribute="top" secondItem="Ynv-jq-eke" secondAttribute="bottom" constant="28" id="Tbi-Iu-IOa"/>
+                            <constraint firstItem="Iq7-FE-3od" firstAttribute="top" secondItem="xb7-tR-oVR" secondAttribute="bottom" constant="8" id="cal-CE-6ox"/>
+                            <constraint firstAttribute="centerX" secondItem="Iq7-FE-3od" secondAttribute="centerX" constant="6" id="ggM-Uq-4m7"/>
+                            <constraint firstAttribute="centerY" secondItem="Iq7-FE-3od" secondAttribute="centerY" constant="-65.5" id="sCR-N2-6PB"/>
+                            <constraint firstAttribute="centerY" secondItem="XKD-mf-R8j" secondAttribute="centerY" constant="18" id="sT2-PI-Dth"/>
+                            <constraint firstAttribute="centerY" secondItem="Ynv-jq-eke" secondAttribute="centerY" constant="76" id="vcH-nQ-C0i"/>
+                            <constraint firstAttribute="centerX" secondItem="Ynv-jq-eke" secondAttribute="centerX" id="y93-gd-hrZ"/>
+                            <constraint firstAttribute="centerX" secondItem="XKD-mf-R8j" secondAttribute="centerX" constant="6" id="yZ3-hh-eMe"/>
+                            <constraint firstItem="xb7-tR-oVR" firstAttribute="top" secondItem="XKD-mf-R8j" secondAttribute="bottom" constant="20" id="zBU-wd-cYv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EPv-Tk-3US"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MAy-pI-Wi5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="767" y="762"/>
         </scene>
         <!--First-->
         <scene sceneID="8Ia-7p-0Kh">
@@ -256,8 +358,30 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="rwt-qw-ZC6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Le-c2-wW9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="qGc-70-EfP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zQE-Fs-LAl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qHE-si-4CJ" kind="relationship" relationship="rootViewController" id="5bp-I6-T5b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Au-eb-gre" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-45" y="762"/>
+        </scene>
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tSe-Qs-Wy5"/>
+    </inferredMetricsTieBreakers>
 </document>
